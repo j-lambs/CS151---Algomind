@@ -1,24 +1,22 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        // Create a Course with Min 2 and Max 5 Students
-        classes javaCourse = new classes("Java Programming", "Learn Java Basics", 5,2 );
+// Main Method for Testing
+public static void main (String[] args) {
+    // Creating a course object
+    Course course1 = new Course("Algebra I", "Basic algebra principles", 101, "9th Grade");
 
-        // Test addEnrolledStudent() method
-        javaCourse.addEnrolledStudent("Karamjeet");
-        javaCourse.addEnrolledStudent("Preet");
-        javaCourse.addEnrolledStudent("Jack");
-        javaCourse.addEnrolledStudent("Preet");
-        javaCourse.addEnrolledStudent("Bhavya");
-        javaCourse.addEnrolledStudent("Sean"); // This should fail (Class is full)
-        // testremove enrolled student()
-        javaCourse.removeEnrolledStudent(" karamjeet");
-        javaCourse.removeEnrolledStudent("Preet");
-        javaCourse.removeEnrolledStudent("Jack");
-        javaCourse.removeEnrolledStudent("Preet");
-        javaCourse.removeEnrolledStudent("Bhavya");
-        javaCourse.removeEnrolledStudent("Sean");
+    // Adding lessons
+    course1.addLesson("Introduction to Algebra");
+    course1.addLesson("Solving Linear Equations");
+    course1.addLesson("Graphing Functions");
 
-    }
+    // Displaying course information
+    course1.displayCourseInfo();
+
+    // Removing a lesson
+    course1.removeLesson("Solving Linear Equations");
+
+    // Display updated information
+    System.out.println("\nUpdated Course Information:");
+    course1.displayCourseInfo();
 }
